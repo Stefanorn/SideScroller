@@ -6,10 +6,9 @@ public class playerMovement : MonoBehaviour {
 	public float speed = 5f;
 	public float jumpForce = 5f;
 
-
-	float jumpTimer = 0.3f;
+	
 	bool hasJumped = false;
-	float jumpDelay = 0.3f;
+	float jumpDelay = 0.7f; //TODO harðkoðun laga
 
 	Rigidbody2D rb;
 	// Use this for initialization
@@ -22,9 +21,8 @@ public class playerMovement : MonoBehaviour {
 
 		rb.AddForce( new Vector2( Input.GetAxis("Horizontal") * speed,0 ));
 
-		if( jumpTimer > 0f && Input.GetAxis("Jump") > 0f  && !hasJumped)  {
+		if( Input.GetAxis("Jump") > 0f  && !hasJumped)  {
 			rb.AddForce( new Vector2( 0, jumpForce ), ForceMode2D.Impulse );
-			jumpTimer -= Time.deltaTime;
 
 			hasJumped = true;
 		}
@@ -32,7 +30,6 @@ public class playerMovement : MonoBehaviour {
 			jumpDelay -= Time.deltaTime;
 			if(jumpDelay <= 0){
 				jumpDelay = 0.7f;
-				jumpTimer = 0.3f;
 				hasJumped = false;
 			}
 		}
