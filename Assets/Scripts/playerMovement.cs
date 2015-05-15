@@ -26,14 +26,14 @@ public class playerMovement : MonoBehaviour {
 		else {
 			anim.SetBool ("IsMoving", false);
 		}
-		anim.SetBool("Jump", hasJumped);
+		anim.SetBool("Jump", hasJumped); //TODO athuga jump animation betur
 
 		rb.AddForce( new Vector2( Input.GetAxis("Horizontal") * speed,0 )); 
 
 		if( Input.GetAxis("Jump") > 0f  && !hasJumped)  {
 			rb.AddForce( new Vector2( 0, jumpForce ), ForceMode2D.Impulse );
 			hasJumped = true;
-		}
+		}  
 		if(hasJumped){
 			jumpDelay -= Time.deltaTime;
 			if(jumpDelay <= 0){

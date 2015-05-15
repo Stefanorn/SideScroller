@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 180d6dbc1af7db24dbcfd426757a86f6
-timeCreated: 1431697751
+timeCreated: 1431714564
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -27,7 +27,7 @@ TextureImporter:
     21300040: Ye_Oldy_Spike_Guy_20
     21300042: Jump1
     21300044: Jump2
-    21300046: Ye_Oldy_Spike_Guy_23
+    21300046: Lives
     21300048: Ye_Oldy_Spike_Guy_24
     21300050: Ye_Oldy_Spike_Guy_25
     21300052: Ye_Oldy_Spike_Guy_26
@@ -309,7 +309,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_23
+    - name: Lives
       rect:
         serializedVersion: 2
         x: 108
