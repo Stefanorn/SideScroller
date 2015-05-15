@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 180d6dbc1af7db24dbcfd426757a86f6
-timeCreated: 1431641663
+timeCreated: 1431697751
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Ye_Oldy_Spike_Guy_0
-    21300002: Ye_Oldy_Spike_Guy_1
-    21300004: Ye_Oldy_Spike_Guy_2
-    21300006: Ye_Oldy_Spike_Guy_3
+    21300000: Idl1
+    21300002: idl2
+    21300004: idl3
+    21300006: idl4
     21300008: Ye_Oldy_Spike_Guy_4
     21300010: Ye_Oldy_Spike_Guy_5
     21300012: Ye_Oldy_Spike_Guy_6
@@ -16,17 +16,17 @@ TextureImporter:
     21300018: Ye_Oldy_Spike_Guy_9
     21300020: Ye_Oldy_Spike_Guy_10
     21300022: Ye_Oldy_Spike_Guy_11
-    21300024: Ye_Oldy_Spike_Guy_12
-    21300026: Ye_Oldy_Spike_Guy_13
-    21300028: Ye_Oldy_Spike_Guy_14
-    21300030: Ye_Oldy_Spike_Guy_15
-    21300032: Ye_Oldy_Spike_Guy_16
-    21300034: Ye_Oldy_Spike_Guy_17
+    21300024: walk1
+    21300026: walk2
+    21300028: walk3
+    21300030: walk4
+    21300032: walk5
+    21300034: walk6
     21300036: Ye_Oldy_Spike_Guy_18
     21300038: Ye_Oldy_Spike_Guy_19
     21300040: Ye_Oldy_Spike_Guy_20
-    21300042: Ye_Oldy_Spike_Guy_21
-    21300044: Ye_Oldy_Spike_Guy_22
+    21300042: Jump1
+    21300044: Jump2
     21300046: Ye_Oldy_Spike_Guy_23
     21300048: Ye_Oldy_Spike_Guy_24
     21300050: Ye_Oldy_Spike_Guy_25
@@ -79,7 +79,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Ye_Oldy_Spike_Guy_0
+    - name: Idl1
       rect:
         serializedVersion: 2
         x: 9
@@ -87,9 +87,9 @@ TextureImporter:
         width: 12
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_1
+    - name: idl2
       rect:
         serializedVersion: 2
         x: 30
@@ -97,9 +97,9 @@ TextureImporter:
         width: 12
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_2
+    - name: idl3
       rect:
         serializedVersion: 2
         x: 51
@@ -107,9 +107,9 @@ TextureImporter:
         width: 12
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_3
+    - name: idl4
       rect:
         serializedVersion: 2
         x: 70
@@ -117,7 +117,7 @@ TextureImporter:
         width: 12
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_4
       rect:
@@ -127,7 +127,7 @@ TextureImporter:
         width: 13
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_5
       rect:
@@ -137,7 +137,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_6
       rect:
@@ -147,7 +147,7 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_7
       rect:
@@ -157,7 +157,7 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_8
       rect:
@@ -167,7 +167,7 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_9
       rect:
@@ -177,7 +177,7 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_10
       rect:
@@ -187,7 +187,7 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_11
       rect:
@@ -197,9 +197,9 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_12
+    - name: walk1
       rect:
         serializedVersion: 2
         x: 9
@@ -209,7 +209,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_13
+    - name: walk2
       rect:
         serializedVersion: 2
         x: 30
@@ -217,9 +217,9 @@ TextureImporter:
         width: 12
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_14
+    - name: walk3
       rect:
         serializedVersion: 2
         x: 51
@@ -227,9 +227,9 @@ TextureImporter:
         width: 12
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_15
+    - name: walk4
       rect:
         serializedVersion: 2
         x: 70
@@ -237,9 +237,9 @@ TextureImporter:
         width: 13
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_16
+    - name: walk5
       rect:
         serializedVersion: 2
         x: 91
@@ -247,9 +247,9 @@ TextureImporter:
         width: 14
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_17
+    - name: walk6
       rect:
         serializedVersion: 2
         x: 111
@@ -257,17 +257,17 @@ TextureImporter:
         width: 14
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_18
       rect:
         serializedVersion: 2
-        x: 7
+        x: 6
         y: 47
         width: 16
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_19
       rect:
@@ -277,7 +277,7 @@ TextureImporter:
         width: 13
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_20
       rect:
@@ -287,9 +287,9 @@ TextureImporter:
         width: 13
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_21
+    - name: Jump1
       rect:
         serializedVersion: 2
         x: 69
@@ -297,9 +297,9 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_22
+    - name: Jump2
       rect:
         serializedVersion: 2
         x: 90
@@ -307,7 +307,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_23
       rect:
@@ -317,7 +317,7 @@ TextureImporter:
         width: 15
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_24
       rect:
@@ -327,7 +327,7 @@ TextureImporter:
         width: 13
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_25
       rect:
@@ -337,7 +337,7 @@ TextureImporter:
         width: 24
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_26
       rect:
@@ -347,7 +347,7 @@ TextureImporter:
         width: 27
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_27
       rect:
@@ -357,7 +357,7 @@ TextureImporter:
         width: 29
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_28
       rect:
@@ -367,7 +367,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_29
       rect:
@@ -377,7 +377,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
