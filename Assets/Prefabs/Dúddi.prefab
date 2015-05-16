@@ -24,9 +24,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427716}
-  - 61: {fileID: 6173470}
   - 50: {fileID: 5014208}
   - 114: {fileID: 11439596}
+  - 58: {fileID: 5869324}
+  - 58: {fileID: 5826468}
   m_Layer: 0
   m_Name: "D\xFAddi"
   m_TagString: Player
@@ -169,8 +170,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6173470
-BoxCollider2D:
+--- !u!58 &5826468
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109356}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -.0700000003}
+  serializedVersion: 2
+  m_Radius: .0500000007
+--- !u!58 &5869324
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -181,7 +195,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .100000001, y: .209999993}
+  m_Radius: .0500000007
 --- !u!81 &8142888
 AudioListener:
   m_ObjectHideFlags: 1
@@ -224,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95261f3e1ee9e3247a0c2fe3ef3108f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 100
   jumpForce: 3
 --- !u!114 &11455632
 MonoBehaviour:

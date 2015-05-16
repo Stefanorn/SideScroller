@@ -27,8 +27,9 @@ public class playerMovement : MonoBehaviour {
 			anim.SetBool ("IsMoving", false);
 		}
 		anim.SetBool("Jump", hasJumped); //TODO athuga jump animation betur
-
-		rb.AddForce( new Vector2( Input.GetAxis("Horizontal") * speed* Time.deltaTime,0 )); 
+		float xVel = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+		float yVel = rb.velocity.y;
+		rb.velocity = new Vector2(xVel, yVel );
 
 		if( Input.GetAxis("Jump") > 0f  && !hasJumped)  {
 			rb.AddForce( new Vector2( 0, jumpForce ), ForceMode2D.Impulse );
