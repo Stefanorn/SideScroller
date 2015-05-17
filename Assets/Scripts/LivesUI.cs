@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class LivesUI : MonoBehaviour {
 
-	public Text lifeFX;
+	public Text lifeFX; //TODO setja þessa script beint inni gameLogic Scriptona
 
 	int life;
 	// Use this for initialization
