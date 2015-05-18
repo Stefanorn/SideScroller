@@ -7,4 +7,8 @@ public class cleanUp : MonoBehaviour {
 
 		Destroy(gameObject);
 	}
+	void OnCollisionEnter2D () {
+		Destroy(gameObject);
+
+	}
 }
