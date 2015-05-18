@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAbleToKillEnemys: 1
+  deathAnimation: {fileID: 166258, guid: 09a4e92db298d414fa2546c5045d7923, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
