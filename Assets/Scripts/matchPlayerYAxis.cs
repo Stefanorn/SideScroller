@@ -19,6 +19,11 @@ public class matchPlayerYAxis : MonoBehaviour {
 			playerPos = GameObject.FindGameObjectWithTag("Player").transform; //Fynnur ekki player þegar hann er dauður NullRef
 			return;
 		}
+
+		if(playerPos.position.x > transform.position.x ){
+			return;
+		}
+
 		Vector3 yPos = new Vector3(transform.position.x , playerPos.position.y, 0 );
 		transform.position = Vector3.MoveTowards(transform.position , yPos, speed * Time.deltaTime );
 	}

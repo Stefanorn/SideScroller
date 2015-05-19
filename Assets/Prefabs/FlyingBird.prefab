@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157164}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 1.00899994, y: .588999987, z: -0}
+  m_LocalPosition: {x: 11.4949999, y: .589999974, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 468164}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDelay: 0
   repeatRate: 2
-  spittForce: -2
+  spittForce: -3
   spitt: {fileID: 138162, guid: 89957031b4dbf7243a96569cdc5e8bf6, type: 2}
   spawnPoint: {fileID: 468164}
 --- !u!212 &21278178

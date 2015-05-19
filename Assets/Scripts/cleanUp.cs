@@ -3,8 +3,12 @@ using System.Collections;
 
 public class cleanUp : MonoBehaviour {
 
+	public bool destroyOnInvisible = true;
+
 	void OnBecameInvisible() {
-		Destroy(gameObject);
+		if(destroyOnInvisible){
+			Destroy(gameObject);
+		}
 	}
 
 	void OnTriggerEnter2D (){

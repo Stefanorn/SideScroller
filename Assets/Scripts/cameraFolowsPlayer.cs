@@ -29,6 +29,6 @@ public class cameraFolowsPlayer : MonoBehaviour {
 
 		transform.position = Vector3.MoveTowards(	cameraPos , 
 		                                         	playerPosWithOutZ , 
-		                                         	speed * Time.deltaTime * speedModifier.x	); //Spurning um að gera rað fyrir Y as?
+		                                         	speed * Time.deltaTime * speedModifier.x); //Spurning um að gera rað fyrir Y as?
 	}
 }

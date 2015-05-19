@@ -20,7 +20,7 @@ public class playerMovement : MonoBehaviour {
 
 	void Update () {
 
-		if(Input.GetAxis("Horizontal") != 0 ){ //TODO aðlaga animation speed að walking speed
+		if(Input.GetAxis("Horizontal") != 0 ){
 			anim.SetBool ("IsMoving", true);
 		}
 		else {
