@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11439596}
   - 58: {fileID: 5869324}
   - 58: {fileID: 5826468}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "D\xFAddi"
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 212: {fileID: 21219178}
   - 95: {fileID: 9582062}
   - 114: {fileID: 11455632}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "d\xFAddi_Sprite"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
