@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &137738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 481750}
+  - 61: {fileID: 6191020}
+  - 114: {fileID: 11480134}
+  m_Layer: 0
+  m_Name: killSwitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &138474
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +27,7 @@ GameObject:
   - 4: {fileID: 450924}
   - 212: {fileID: 21274700}
   - 95: {fileID: 9572854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: goomba_GPX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,8 +45,7 @@ GameObject:
   - 50: {fileID: 5084738}
   - 114: {fileID: 11482626}
   - 58: {fileID: 5840196}
-  - 114: {fileID: 11420494}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Goomba
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -55,12 +71,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: .270000011, z: 0}
+  m_LocalPosition: {x: .243000001, y: -.26699999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450924}
+  - {fileID: 481750}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &481750
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .00200000009, y: .0340000018, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 465664}
+  m_RootOrder: 1
 --- !u!50 &5084738
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -89,6 +118,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .0500000007
+--- !u!61 &6191020
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137738}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .0700000003, y: .0599999987}
 --- !u!95 &9572854
 Animator:
   serializedVersion: 3
@@ -106,18 +148,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11420494
+--- !u!114 &11480134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187902}
+  m_GameObject: {fileID: 137738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 892a1087d4ef0aa41831647b501d055f, type: 3}
+  m_Script: {fileID: 11500000, guid: cabfc284082231a4087e2109abd7af49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToKillEnemys: 0
+  skopp: 5
 --- !u!114 &11482626
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,6 +21,7 @@ public class walkForward : MonoBehaviour {
 
 		if(xVel == 0){
 			if(xVel == 0 && wasZeroLastFrame){
+				transform.Rotate( new Vector3( 0 , 180 ) );
 				speed *= -1;
 				wasZeroLastFrame = false;
 				return;

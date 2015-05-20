@@ -3,7 +3,6 @@ using System.Collections;
 
 public class DeathMessageSender : MonoBehaviour {
 
-	public bool isAbleToKillEnemys = true;
 	public GameObject deathAnimation;
 
 	GameObject obj;
@@ -19,7 +18,7 @@ public class DeathMessageSender : MonoBehaviour {
 			                                 			ForceMode2D.Impulse);
 			Invoke("DeathDelay" , 2f);
 		}
-		else if(col.tag == "Enemy" && isAbleToKillEnemys) {
+		else if(col.tag == "Enemy") {
 			Destroy(col.gameObject);
 		}
 	}

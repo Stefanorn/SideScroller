@@ -4,7 +4,8 @@ using System.Collections;
 public class cameraFolowsPlayer : MonoBehaviour {
 
 	public float speed = 2f;
-	
+	public Vector3 offset;
+
 	Transform playerPos;
 	
 	// Use this for initialization
@@ -24,11 +25,14 @@ public class cameraFolowsPlayer : MonoBehaviour {
 
 		Vector3 speedModifier =  cameraPos - playerPosWithOutZ;
 		if(speedModifier.x < 0f ){
-			speedModifier *= -1;
+			speedModifier.x *= -1;
 		}
-
+		if(speedModifier.y < 0f ){
+			speedModifier.y *= -1;
+		}
 		transform.position = Vector3.MoveTowards(	cameraPos , 
 		                                         	playerPosWithOutZ , 
-		                                         	speed * Time.deltaTime * speedModifier.x); //Spurning um að gera rað fyrir Y as?
+		                                         speed * Time.deltaTime * (speedModifier.x + speedModifier.y));
+		transform.position += offset;
 	}
 }
