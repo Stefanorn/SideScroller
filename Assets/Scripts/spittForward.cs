@@ -10,22 +10,33 @@ public class spittForward : MonoBehaviour {
 	public GameObject spitt;
 	public Transform spawnPoint;
 	
-
-	// Update is called once per frame
-	void Start(){
+	Transform playerPos;
+	
+	// Use this for initialization
+	void Start () {	
+		
+		//playerPos = GameObject.FindGameObjectWithTag("Player").transform;
 		InvokeRepeating( "Spitt",  startDelay ,repeatRate);
-
 	}
 
 	void Spitt() {
+		playerPos = GameObject.FindGameObjectWithTag("Player").transform; //OPTIMIZE?
+
+		Vector3 distPlayerTransform = spawnPoint.transform.position - playerPos.transform.position;
+		float yArc = distPlayerTransform.x + distPlayerTransform.y;
+		if (distPlayerTransform.x < 0){
+			return;
+		}
+		Quaternion spitrotation = new Quaternion (	Quaternion.identity.x , 
+			                                      	Quaternion.identity.y , 
+			                                     	spawnPoint.rotation.z ,
+		                                	   	   	Quaternion.identity.w );
 
 		GameObject instanceOfSpitt = (GameObject)Instantiate(	spitt,
 		                                                     	spawnPoint.position,
-		                                                     	Quaternion.identity	);
-
-
-		instanceOfSpitt.GetComponent<Rigidbody2D>().AddForce(	new Vector2 (spittForce, 0), 
-		                                                     	ForceMode2D.Impulse);
+		                                                 	    spitrotation	);
+		instanceOfSpitt.GetComponent<Rigidbody2D>().AddForce( new Vector2 (	spittForce, yArc), 
+		                                                     				ForceMode2D.Impulse);
 		
 	}
 }
