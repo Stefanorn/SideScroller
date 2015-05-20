@@ -20,7 +20,10 @@ public class spittForward : MonoBehaviour {
 	}
 
 	void Spitt() {
-		playerPos = GameObject.FindGameObjectWithTag("Player").transform; //OPTIMIZE?
+		playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+		if(playerPos == null){
+			return;
+		}
 
 		Vector3 distPlayerTransform = spawnPoint.transform.position - playerPos.transform.position;
 		float yArc = distPlayerTransform.x + distPlayerTransform.y;

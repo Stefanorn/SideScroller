@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 180d6dbc1af7db24dbcfd426757a86f6
-timeCreated: 1431976477
+timeCreated: 1432159989
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,12 +10,12 @@ TextureImporter:
     21300006: idl4
     21300008: Death
     21300010: Ye_Oldy_Spike_Guy_5
-    21300012: Ye_Oldy_Spike_Guy_6
-    21300014: Ye_Oldy_Spike_Guy_7
-    21300016: Ye_Oldy_Spike_Guy_8
-    21300018: Ye_Oldy_Spike_Guy_9
-    21300020: Ye_Oldy_Spike_Guy_10
-    21300022: Ye_Oldy_Spike_Guy_11
+    21300012: Attack+walk1
+    21300014: Attack+walk2
+    21300016: Attack+walk3
+    21300018: Attack+walk4
+    21300020: Attack+walk5
+    21300022: Attack+walk6
     21300024: walk1
     21300026: walk2
     21300028: walk3
@@ -28,10 +28,10 @@ TextureImporter:
     21300042: Jump1
     21300044: Jump2
     21300046: Lives
-    21300048: Ye_Oldy_Spike_Guy_24
-    21300050: Ye_Oldy_Spike_Guy_25
-    21300052: Ye_Oldy_Spike_Guy_26
-    21300054: Ye_Oldy_Spike_Guy_27
+    21300048: attack1
+    21300050: attack2
+    21300052: attack3
+    21300054: attack4
     21300056: Ye_Oldy_Spike_Guy_28
     21300058: Ye_Oldy_Spike_Guy_29
   serializedVersion: 2
@@ -139,65 +139,65 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_6
+    - name: Attack+walk1
       rect:
         serializedVersion: 2
         x: 7
         y: 96
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .337508172, y: .612174511}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_7
+    - name: Attack+walk2
       rect:
         serializedVersion: 2
         x: 35
         y: 97
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .330122203, y: .574783325}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_8
+    - name: Attack+walk3
       rect:
         serializedVersion: 2
         x: 62
         y: 96
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .381824076, y: .612174511}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_9
+    - name: Attack+walk4
       rect:
         serializedVersion: 2
         x: 90
         y: 96
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .344894141, y: .587246895}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_10
+    - name: Attack+walk5
       rect:
         serializedVersion: 2
         x: 119
         y: 97
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .315349996, y: .599710941}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_11
+    - name: Attack+walk6
       rect:
         serializedVersion: 2
         x: 146
         y: 96
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .294858009, y: .590306759}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: walk1
       rect:
@@ -319,7 +319,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_24
+    - name: attack1
       rect:
         serializedVersion: 2
         x: 7
@@ -329,35 +329,35 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_25
+    - name: attack2
       rect:
         serializedVersion: 2
         x: 25
         y: 26
         width: 24
         height: 18
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .30338034, y: .534953654}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_26
+    - name: attack3
       rect:
         serializedVersion: 2
         x: 54
         y: 26
         width: 27
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .27862069, y: .578647137}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ye_Oldy_Spike_Guy_27
+    - name: attack4
       rect:
         serializedVersion: 2
         x: 83
         y: 26
         width: 29
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .283040285, y: .617971659}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Ye_Oldy_Spike_Guy_28
       rect:
