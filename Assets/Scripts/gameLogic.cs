@@ -10,13 +10,32 @@ public class gameLogic : MonoBehaviour {
 	public Text scoreTextUI;
 	public Text LivesUI;
 
+	public bool ignoreDeath = false;
+
 	float totalPoints = 0f;
 	
 	// Use this for initialization
 	void Start () {
-		Respawn();
+		if(lives != 0){
+			Instantiate( player, transform.position, Quaternion.identity);
+			lives--;
+			Lives ();
+		}
+		else {
+			LoseGame();
+		}
+	}
+	void Update(){
+		if(Input.GetKey(KeyCode.R)){
+			GameObject PlayerRespawn = GameObject.FindGameObjectWithTag("Player");
+			PlayerRespawn.transform.position = transform.position;
+
+		}
 	}
 	public void Respawn(){
+		if(ignoreDeath == true){
+			return;
+		}
 		if(lives != 0){
 			Instantiate( player, transform.position, Quaternion.identity);
 			lives--;

@@ -9,6 +9,9 @@ public class DeathMessageSender : MonoBehaviour {
 
 	void OnTriggerEnter2D ( Collider2D col ){
 		if(col.tag == "Player"){
+			if(GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().ignoreDeath){
+				return;
+			}
 			obj = col.gameObject;
 			Destroy(obj.gameObject);
 			GameObject death = (GameObject)Instantiate(	deathAnimation,
