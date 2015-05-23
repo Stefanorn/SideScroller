@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b1ae2c7e7cb4ba04aae34c40cf36c10c
-timeCreated: 1431822941
+timeCreated: 1432299369
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: spikes_7
     21300016: spikes_8
     21300018: spikes_9
+    21300020: spikes_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -87,7 +88,7 @@ TextureImporter:
         width: 175
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: spikes_3
       rect:
@@ -147,7 +148,7 @@ TextureImporter:
         width: 45
         height: 94
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: spikes_9
       rect:
@@ -158,6 +159,16 @@ TextureImporter:
         height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spikes_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 35
+        width: 179
+        height: 180
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
