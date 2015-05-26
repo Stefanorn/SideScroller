@@ -36,7 +36,7 @@ public class playerMovement : MonoBehaviour {
 
 		if( groundCheck.collider != null ) { 
 			if( Input.GetAxis("Jump") > 0f & !hasJumped ) {
-				rb.AddForce( new Vector2( 0, jumpForce ), ForceMode2D.Impulse );
+				rb.velocity = new Vector3(0, jumpForce);
 				hasJumped = true;
 				Invoke("JumpDelay", 0.2f );
 			}

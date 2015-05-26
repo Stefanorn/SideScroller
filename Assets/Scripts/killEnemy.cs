@@ -17,11 +17,10 @@ public class killEnemy : MonoBehaviour {
 			if(parentObj.GetComponent<PolygonCollider2D>() != null){
 				parentObj.GetComponent<PolygonCollider2D>().enabled = false;
 			}
-			Debug.Log( parentObj.GetComponent<CircleCollider2D>() );
 			parentObj.GetComponent<Rigidbody2D>().AddForce( new Vector2 (0, 60f ));
 			parentObj.transform.localScale = new Vector3(1,0.5f,1);
 
-			col.GetComponent<Rigidbody2D>().AddForce(new Vector2(0 , skopp) , ForceMode2D.Impulse );
+			col.GetComponent<Rigidbody2D>().velocity = new Vector3(0 , skopp) ;
 		}
 
 	}
