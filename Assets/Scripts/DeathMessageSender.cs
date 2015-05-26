@@ -17,15 +17,13 @@ public class DeathMessageSender : MonoBehaviour {
 			GameObject death = (GameObject)Instantiate(	deathAnimation,
 			                                            col.gameObject.transform.position,
 			                                            Quaternion.identity	);
-			death.GetComponent<Rigidbody2D>().AddForce(	new Vector2 (0, 4f), 
+			death.GetComponent<Rigidbody2D>().AddForce(	new Vector2 (0, 12f), 
 			                                 			ForceMode2D.Impulse);
 			Invoke("DeathDelay" , 2f);
-		}
-		else if(col.tag == "Enemy") {
-			Destroy(col.gameObject);
 		}
 	}
 	void DeathDelay(){
 		GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().Respawn();	
+		Debug.Log("asdfasf");
 	}
 }

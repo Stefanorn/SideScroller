@@ -11,7 +11,13 @@ public class killEnemy : MonoBehaviour {
 			GameObject parentObj = gameObject.transform.parent.gameObject;
 			Destroy(parentObj , 2f);
 			parentObj.GetComponent<walkForward>().enabled = false;
-			parentObj.GetComponent<CircleCollider2D>().enabled = false;
+			if( parentObj.GetComponent<CircleCollider2D>() != null ){
+				parentObj.GetComponent<CircleCollider2D>().enabled = false;
+			}
+			if(parentObj.GetComponent<PolygonCollider2D>() != null){
+				parentObj.GetComponent<PolygonCollider2D>().enabled = false;
+			}
+			Debug.Log( parentObj.GetComponent<CircleCollider2D>() );
 			parentObj.GetComponent<Rigidbody2D>().AddForce( new Vector2 (0, 60f ));
 			parentObj.transform.localScale = new Vector3(1,0.5f,1);
 

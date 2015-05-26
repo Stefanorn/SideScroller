@@ -16,7 +16,6 @@ public class Rotation : MonoBehaviour {
 		if(rotationValue <= -360){
 			rotationValue += 360;
 		}
-		Debug.Log( rotationValue );
 
 		transform.rotation = Quaternion.AngleAxis(rotationValue,Vector3.forward);
 	}

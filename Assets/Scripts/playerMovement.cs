@@ -5,6 +5,7 @@ public class playerMovement : MonoBehaviour {
 
 	public float speed = 5f;
 	public float jumpForce = 5f;
+	public float GroundCheckRayLenght = 1f;
 
 	
 	bool hasJumped = false;
@@ -22,10 +23,10 @@ public class playerMovement : MonoBehaviour {
 
 		RaycastHit2D groundCheck = Physics2D.Raycast (	transform.position,
 		                                              	-Vector2.up,
-		                     							0.2f  );
+		                                              	GroundCheckRayLenght  );
 		RaycastHit2D jumpAnimationGroundCheck = Physics2D.Raycast ( transform.position,
 		                                                           	-Vector2.up,
-		                                                            0.3f );
+		                                                            GroundCheckRayLenght * 1.2f );
 		if(jumpAnimationGroundCheck.collider != null) {
 			anim.SetBool("Jump", false);
 		}
