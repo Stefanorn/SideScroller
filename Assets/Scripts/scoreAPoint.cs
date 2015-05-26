@@ -10,6 +10,7 @@ public class scoreAPoint : MonoBehaviour {
 		if(col.tag == "Player"){
 			GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().Score(10f);
 		}
+		Destroy(gameObject);
 	}
 
 }

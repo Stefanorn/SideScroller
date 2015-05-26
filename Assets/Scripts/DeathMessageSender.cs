@@ -24,6 +24,5 @@ public class DeathMessageSender : MonoBehaviour {
 	}
 	void DeathDelay(){
 		GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().Respawn();	
-		Debug.Log("asdfasf");
 	}
 }

@@ -36,6 +36,10 @@ public class gameLogic : MonoBehaviour {
 		if(ignoreDeath == true){
 			return;
 		}
+		GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach(GameObject enemy in enemys){
+			Destroy(enemy);
+		}
 		if(lives != 0){
 			Instantiate( player, transform.position, Quaternion.identity);
 			lives--;
