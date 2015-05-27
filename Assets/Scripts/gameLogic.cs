@@ -13,11 +13,13 @@ public class gameLogic : MonoBehaviour {
 	public bool ignoreDeath = false;
 
 	float totalPoints = 0f;
+	GameObject playerInstace;
 	
 	// Use this for initialization
 	void Start () {
 		if(lives != 0){
-			Instantiate( player, transform.position, Quaternion.identity);
+			playerInstace = (GameObject)Instantiate( player, transform.position, Quaternion.identity);
+
 			lives--;
 			Lives ();
 		}
@@ -25,23 +27,30 @@ public class gameLogic : MonoBehaviour {
 			LoseGame();
 		}
 	}
+
+	public Transform SendPlayerTransformInfo() {
+			return playerInstace.transform;
+	}
 	void Update(){
 		if(Input.GetKey(KeyCode.R)){
 			GameObject PlayerRespawn = GameObject.FindGameObjectWithTag("Player");
 			PlayerRespawn.transform.position = transform.position;
-
 		}
 	}
 	public void Respawn(){
+
 		if(ignoreDeath == true){
 			return;
 		}
+		Invoke("WaitASecoindForRespawn",2);
+	}
+	void WaitASecoindForRespawn(){
 		GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach(GameObject enemy in enemys){
 			Destroy(enemy);
 		}
 		if(lives != 0){
-			Instantiate( player, transform.position, Quaternion.identity);
+			playerInstace = (GameObject)Instantiate( player, transform.position, Quaternion.identity);
 			lives--;
 			Lives ();
 		}

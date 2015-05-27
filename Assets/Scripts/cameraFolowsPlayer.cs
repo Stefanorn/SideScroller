@@ -15,9 +15,8 @@ public class cameraFolowsPlayer : MonoBehaviour {
 	}
 
 	void FixedUpdate (){
-
-		if(playerPos == null){
-			playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+		playerPos = GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().SendPlayerTransformInfo();
+		if(playerPos == null) {
 			return;
 		}
 		Vector3 cameraPos = new Vector3(transform.position.x,transform.position.y, -10f);

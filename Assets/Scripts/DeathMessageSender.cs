@@ -12,17 +12,14 @@ public class DeathMessageSender : MonoBehaviour {
 			if(GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().ignoreDeath){
 				return;
 			}
-			obj = col.gameObject;
-			Destroy(obj.gameObject);
+			col.gameObject.SetActive(false);
+		
 			GameObject death = (GameObject)Instantiate(	deathAnimation,
 			                                            col.gameObject.transform.position,
 			                                            Quaternion.identity	);
 			death.GetComponent<Rigidbody2D>().AddForce(	new Vector2 (0, 12f), 
 			                                 			ForceMode2D.Impulse);
-			Invoke("DeathDelay" , 2f);
+			GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().Respawn();	
 		}
-	}
-	void DeathDelay(){
-		GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().Respawn();	
 	}
 }
