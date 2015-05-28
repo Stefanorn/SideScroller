@@ -26,7 +26,7 @@ public class spittForward : MonoBehaviour {
 		}
 
 		Vector3 distPlayerTransform = spawnPoint.transform.position - playerPos.transform.position;
-		float yArc = distPlayerTransform.x + distPlayerTransform.y;
+		float yArc = (distPlayerTransform.x + distPlayerTransform.y);
 		if (distPlayerTransform.x < 0){
 			return;
 		}

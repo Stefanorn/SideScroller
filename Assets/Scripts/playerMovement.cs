@@ -9,7 +9,6 @@ public class playerMovement : MonoBehaviour {
 
 	
 	bool hasJumped = false;
-//	float jumpDelay = 0.5f; //TODO harðkoðun laga
 
 	Rigidbody2D rb;
 	Animator anim;
@@ -28,6 +27,13 @@ public class playerMovement : MonoBehaviour {
 		                                                           	-Vector2.up,
 		                                                            GroundCheckRayLenght * 1.2f );
 		if(jumpAnimationGroundCheck.collider != null) {
+			if(jumpAnimationGroundCheck.collider.tag == "Enemy"){
+				rb.velocity = new Vector2(0, jumpForce/2f);
+				jumpAnimationGroundCheck.collider.GetComponent<Rigidbody2D>().AddForce(	new Vector2( 0, 6f ),
+				                                                                       ForceMode2D.Impulse );
+				Destroy(jumpAnimationGroundCheck.collider);
+
+			}
 			anim.SetBool("Jump", false);
 		}
 		else {
