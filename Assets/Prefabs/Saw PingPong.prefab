@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 401010}
   - 114: {fileID: 11406562}
   m_Layer: 0
-  m_Name: Saw
+  m_Name: Saw PingPong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

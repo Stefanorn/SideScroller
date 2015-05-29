@@ -13,7 +13,6 @@ public class gameLogic : MonoBehaviour {
 	public bool ignoreDeath = false;
 
 	float totalPoints = 0f;
-	bool canIRespawn = false;
 	GameObject playerInstace;
 	
 	// Use this for initialization
@@ -32,20 +31,14 @@ public class gameLogic : MonoBehaviour {
 	public Transform SendPlayerTransformInfo() {
 		return playerInstace.transform;
 	}
-	public bool RespawnSingleEnemys(){ //Hlitur að vera til betri lausn
-		return canIRespawn;
-	}
-	void FixedUpdate() {
-								
-	}
+
+
 	void Update(){
 		if(Input.GetKey(KeyCode.R)){
 			GameObject PlayerRespawn = GameObject.FindGameObjectWithTag("Player");
 			PlayerRespawn.transform.position = transform.position;
 		}
-		if(canIRespawn){
-			canIRespawn = false;
-		}		
+
 	}
 	public void Respawn(){
 
@@ -55,12 +48,11 @@ public class gameLogic : MonoBehaviour {
 		Invoke("WaitASecoindForRespawn",2);
 	}
 	void WaitASecoindForRespawn(){
-		canIRespawn = true;
 		GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
 		foreach(GameObject enemy in enemys){
 			Destroy(enemy);
 		}
-		
+		GameObject.FindWithTag("EnemySpawner").GetComponent<enemySpawner>().SingleSpawn();
 		if(lives != 0){
 			playerInstace = (GameObject)Instantiate( player, transform.position, Quaternion.identity);
 			lives--;

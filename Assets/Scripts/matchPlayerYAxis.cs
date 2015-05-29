@@ -10,7 +10,6 @@ public class matchPlayerYAxis : MonoBehaviour {
 	// Use this for initialization
 	void Start () {	
 
-		playerPos = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame

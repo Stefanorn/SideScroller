@@ -18,17 +18,11 @@ public class enemySpawner : MonoBehaviour {
 			InvokeRepeating("Spawn", startDelay, spawnRate );
 		}
 	}
-	void FixedUpdate() {
-		if( GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().RespawnSingleEnemys() ){
-			Invoke("SingleSpawn",startDelay);
-		}
-
-	}
 	void Spawn (){
 
 		Instantiate( enemyToSpawn ,transform.position ,Quaternion.identity );
 	}
-	void SingleSpawn(){
+	public void SingleSpawn(){
 		Instantiate( enemyToSpawn ,transform.position ,Quaternion.identity );
 	}
 }
