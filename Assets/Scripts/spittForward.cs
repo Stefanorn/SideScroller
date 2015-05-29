@@ -20,13 +20,20 @@ public class spittForward : MonoBehaviour {
 	}
 
 	void Spitt() {
-		playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+		playerPos = GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().SendPlayerTransformInfo();
 		if(playerPos == null){
 			return;
 		}
 
 		Vector3 distPlayerTransform = spawnPoint.transform.position - playerPos.transform.position;
-		float yArc = (distPlayerTransform.x + distPlayerTransform.y);
+		float distPlayerXY = distPlayerTransform.x + distPlayerTransform.y;
+		if(distPlayerXY <= 0.1f){
+			distPlayerXY = 0.1f;
+		}
+		float yArc =  Mathf.Sqrt (distPlayerXY);
+//		if(yArc <= 0.1f){
+//			yArc = 0.1f;
+//		}
 		if (distPlayerTransform.x < 0){
 			return;
 		}

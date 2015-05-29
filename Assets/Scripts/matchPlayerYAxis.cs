@@ -15,10 +15,7 @@ public class matchPlayerYAxis : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if(playerPos == null){
-			playerPos = GameObject.FindGameObjectWithTag("Player").transform; //Fynnur ekki player þegar hann er dauður NullRef
-			return;
-		}
+		playerPos = GameObject.FindWithTag("Respawn").GetComponent<gameLogic>().SendPlayerTransformInfo();
 
 		if(playerPos.position.x > transform.position.x ){
 			return;

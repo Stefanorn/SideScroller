@@ -28,9 +28,9 @@ public class playerMovement : MonoBehaviour {
 		                                                            GroundCheckRayLenght * 1.2f );
 		if(jumpAnimationGroundCheck.collider != null) {
 			if(jumpAnimationGroundCheck.collider.tag == "Enemy"){
-				rb.velocity = new Vector2(0, jumpForce/2f);
+				rb.velocity = new Vector2(0, jumpForce/1.5f);
 				jumpAnimationGroundCheck.collider.GetComponent<Rigidbody2D>().AddForce(	new Vector2( 0, 6f ),
-				                                                                       ForceMode2D.Impulse );
+				                                                                        ForceMode2D.Impulse );
 				Destroy(jumpAnimationGroundCheck.collider);
 
 			}
