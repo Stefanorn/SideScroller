@@ -64,7 +64,7 @@ public class gameLogic : MonoBehaviour {
 	}
 	public void Score(float point ) {
 		totalPoints += point;
-		scoreTextUI.text = "Points : " + totalPoints.ToString();
+		scoreTextUI.text = "Points : " + totalPoints.ToString(); 
 
 		//hvítur 10 grænn 20 rauður 50 , blár 100 og svartur 500
 	}

@@ -31,6 +31,10 @@ public class playerMovement : MonoBehaviour {
 				rb.velocity = new Vector2(0, jumpForce/1.5f);
 				jumpAnimationGroundCheck.collider.GetComponent<Rigidbody2D>().AddForce(	new Vector2( 0, 6f ),
 				                                                                        ForceMode2D.Impulse );
+				if( jumpAnimationGroundCheck.collider.GetComponent<matchPlayerYAxis>() ) {
+					jumpAnimationGroundCheck.collider.GetComponent<matchPlayerYAxis>().enabled = false;
+					jumpAnimationGroundCheck.collider.GetComponent<Rigidbody2D>().isKinematic = false;
+				}
 				Destroy(jumpAnimationGroundCheck.collider);
 
 			}
