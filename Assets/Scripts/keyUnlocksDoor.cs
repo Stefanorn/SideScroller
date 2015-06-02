@@ -13,7 +13,6 @@ public class keyUnlocksDoor : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col ) {
-
 		if(col.tag == "Player"){
 			door.GetComponent<BoxCollider2D>().enabled = false; 
 			door.GetComponent<Rigidbody2D>().isKinematic = false;
@@ -22,12 +21,13 @@ public class keyUnlocksDoor : MonoBehaviour {
 
 	}
 	IEnumerator KeyToDoor() {
-		timeFromAtoB = timeFromAtoB + Time.time;
+		float timer = 0f;
 
-		while(Time.time <= timeFromAtoB ){
+		while(timer <= timeFromAtoB ){
 			key.transform.position = Vector3.Lerp( 	key.transform.position ,
 			                             			door.transform.position , 
-			                                      	Time.time / timeFromAtoB );
+			                                      	timer / timeFromAtoB );
+			timer += Time.deltaTime;
 			yield return null;
 		}
 	}
