@@ -205,6 +205,8 @@ MonoBehaviour:
   speed: 350
   jumpForce: 10
   GroundCheckRayLenght: .5
+  slidingDecayOnIcySurface: 8
+  slidingSpeed: 25
 --- !u!114 &11455632
 MonoBehaviour:
   m_ObjectHideFlags: 1
