@@ -16,7 +16,7 @@ public class mapBuilder : MonoBehaviour {
 
 	public groundTypes[] ground;
 
-	[Range (0, 5)]
+	[Range (0, 3)]
 	public int groundPicker = 0;
 	int groundPickerUpdater = 0;
 	[Range (1,30)]
@@ -30,6 +30,9 @@ public class mapBuilder : MonoBehaviour {
 		}
 
 		if(gameObject.transform.childCount != lenght || groundPicker != groundPickerUpdater){ //Destroys all GameObject if the Legngth is changed
+			if(groundPicker != groundPickerUpdater ){
+				SetupTheGroundType();
+			}
 			Transform[] childs;
 			childs = GetComponentsInChildren<Transform>();
 			foreach(Transform child in childs ){
@@ -72,5 +75,54 @@ public class mapBuilder : MonoBehaviour {
 		                                                      Quaternion.identity );
 		instaceOfGround.transform.SetParent(gameObject.transform); 
 		offset++;
+	}
+	void SetupTheGroundType(){
+		switch(groundPicker){
+			PlatformEffector2D pe = (PlatformEffector2D)gameObject.GetComponent<PlatformEffector2D>();
+			SurfaceEffector2D se = (SurfaceEffector2D)gameObject.GetComponent<SurfaceEffector2D>();
+			BoxCollider2D bc = (BoxCollider2D)gameObject.GetComponent<BoxCollider2D>();
+			case 0:
+				bc.usedByEffector = false;
+				gameObject.tag = "Untagged";
+				break;
+			case 1:
+//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
+//				if(gameObject.GetComponent<SurfaceEffector2D>())
+//					DestroyImmediate(gameObject.GetComponent<SurfaceEffector2D>());
+//				gameObject.AddComponent<PlatformEffector2D>();
+//				gameObject.tag = "Untagged";
+				break;
+			case 2:
+//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = false;
+//				if(gameObject.GetComponent<PlatformEffector2D>())
+//					DestroyImmediate(gameObject.GetComponent<PlatformEffector2D>());
+//				if( gameObject.GetComponent<PlatformEffector2D>() = false)
+//					SurfaceEffector2D se = (SurfaceEffector2D)gameObject.AddComponent<SurfaceEffector2D>();
+//				se.speed = 10f;
+//				se.forceScale = 0.1f;
+//				se.useFriction = true;
+//				se.useBounce = true;
+//				gameObject.tag = "SnowGround";
+				break;
+			case 3:
+//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
+//				if(gameObject.GetComponent<PlatformEffector2D>())
+//					DestroyImmediate(gameObject.GetComponent<PlatformEffector2D>());
+//					SurfaceEffector2D se = (SurfaceEffector2D)gameObject.AddComponent<SurfaceEffector2D>();
+//				se.speed = 0f;	
+//				se.forceScale = 0.7f;
+//				se.useFriction = true;
+//				se.useBounce = true;
+//				gameObject.tag = "Untagged";		
+				break;
+			default:
+//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = false;
+//				
+//				gameObject.tag = "Untagged";
+				break;
+		}
+
+
+
 	}
 }
