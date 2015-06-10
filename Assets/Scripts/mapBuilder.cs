@@ -28,10 +28,24 @@ public class mapBuilder : MonoBehaviour {
 		if(groundPicker > ground.Length){ //Watches that you dont get a out of arry index error
 			groundPicker = 0;
 		}
-
 		if(gameObject.transform.childCount != lenght || groundPicker != groundPickerUpdater){ //Destroys all GameObject if the Legngth is changed
-			if(groundPicker != groundPickerUpdater ){
-				SetupTheGroundType();
+			if(groundPicker != groundPickerUpdater ){ //Adds and removes compoments and changes setting foreach platform
+				DefaultState();                       //Reset everything to default
+
+				if (groundPicker == 1){ //One Sided platform
+					gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
+					gameObject.AddComponent<PlatformEffector2D>();
+				}
+				else if( groundPicker == 2 ){ //Snow Platform
+					gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
+					gameObject.AddComponent<SurfaceEffector2D>();
+					gameObject.tag = "SnowGround";
+				}
+				else if(groundPicker == 3){ //Sand Platform
+					gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
+					gameObject.AddComponent<SurfaceEffector2D>().forceScale = 0.7f;
+					gameObject.GetComponent<SurfaceEffector2D>().speed = 0f;
+				}
 			}
 			Transform[] childs;
 			childs = GetComponentsInChildren<Transform>();
@@ -63,7 +77,16 @@ public class mapBuilder : MonoBehaviour {
 
 		}
 	}
-	
+	void DefaultState(){
+		if(gameObject.GetComponent<SurfaceEffector2D>()){
+			DestroyImmediate(gameObject.GetComponent<SurfaceEffector2D>());
+		}
+		if(gameObject.GetComponent<PlatformEffector2D>()){
+			DestroyImmediate(gameObject.GetComponent<PlatformEffector2D>());
+		}
+		gameObject.GetComponent<BoxCollider2D>().usedByEffector = false;
+		gameObject.tag = "Untagged";
+	}
 	void InstaciateGroundType( GameObject groundTrans){ //Takes in the right GameObject and instanciates it to the right place
 
 		Vector3 platformPos = new Vector3(	transform.position.x + (float)offset, //Finds the right place
@@ -75,54 +98,5 @@ public class mapBuilder : MonoBehaviour {
 		                                                      Quaternion.identity );
 		instaceOfGround.transform.SetParent(gameObject.transform); 
 		offset++;
-	}
-	void SetupTheGroundType(){
-		switch(groundPicker){
-			PlatformEffector2D pe = (PlatformEffector2D)gameObject.GetComponent<PlatformEffector2D>();
-			SurfaceEffector2D se = (SurfaceEffector2D)gameObject.GetComponent<SurfaceEffector2D>();
-			BoxCollider2D bc = (BoxCollider2D)gameObject.GetComponent<BoxCollider2D>();
-			case 0:
-				bc.usedByEffector = false;
-				gameObject.tag = "Untagged";
-				break;
-			case 1:
-//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
-//				if(gameObject.GetComponent<SurfaceEffector2D>())
-//					DestroyImmediate(gameObject.GetComponent<SurfaceEffector2D>());
-//				gameObject.AddComponent<PlatformEffector2D>();
-//				gameObject.tag = "Untagged";
-				break;
-			case 2:
-//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = false;
-//				if(gameObject.GetComponent<PlatformEffector2D>())
-//					DestroyImmediate(gameObject.GetComponent<PlatformEffector2D>());
-//				if( gameObject.GetComponent<PlatformEffector2D>() = false)
-//					SurfaceEffector2D se = (SurfaceEffector2D)gameObject.AddComponent<SurfaceEffector2D>();
-//				se.speed = 10f;
-//				se.forceScale = 0.1f;
-//				se.useFriction = true;
-//				se.useBounce = true;
-//				gameObject.tag = "SnowGround";
-				break;
-			case 3:
-//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = true;
-//				if(gameObject.GetComponent<PlatformEffector2D>())
-//					DestroyImmediate(gameObject.GetComponent<PlatformEffector2D>());
-//					SurfaceEffector2D se = (SurfaceEffector2D)gameObject.AddComponent<SurfaceEffector2D>();
-//				se.speed = 0f;	
-//				se.forceScale = 0.7f;
-//				se.useFriction = true;
-//				se.useBounce = true;
-//				gameObject.tag = "Untagged";		
-				break;
-			default:
-//				gameObject.GetComponent<BoxCollider2D>().usedByEffector = false;
-//				
-//				gameObject.tag = "Untagged";
-				break;
-		}
-
-
-
 	}
 }
