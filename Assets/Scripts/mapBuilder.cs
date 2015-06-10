@@ -28,6 +28,7 @@ public class mapBuilder : MonoBehaviour {
 	public int rightWall = 0;
 
 	int offset = 0;
+	bool hasReachedEndOfGround = false;
 
 	void Update() {
 
@@ -39,7 +40,7 @@ public class mapBuilder : MonoBehaviour {
 		if(groundPicker > ground.Length){ //Watches that you dont get a out of arry index error
 			groundPicker = 0;
 		}
-		if(gameObject.transform.childCount != lenght || groundPicker != groundPickerUpdater){ //Destroys all GameObject if the Legngth is changed
+		if(gameObject.transform.childCount != (lenght + leftWall + rightWall) || groundPicker != groundPickerUpdater){ //Destroys all GameObject if the Legngth is changed
 			if(groundPicker != groundPickerUpdater ){ //Adds and removes compoments and changes setting foreach platform
 				DefaultState();                       //Reset everything to default
 
@@ -72,7 +73,17 @@ public class mapBuilder : MonoBehaviour {
 			col.size = new Vector2( (float)lenght , col.size.y );
 		}
 		offset = 0; //offsets the tiles 1 unit to the left and also helps with choosing of the tile image
-		while(gameObject.transform.childCount != lenght  || groundPicker != groundPickerUpdater){ //Innstanciates the game objects if the lenght is changed
+		while(gameObject.transform.childCount != (lenght + leftWall + rightWall)  || groundPicker != groundPickerUpdater){ //Innstanciates the game objects if the lenght is changed
+				if( (lenght + leftWall + rightWall) > 95){
+					Debug.LogError(	"infinityloop in MainWhileLoop  gameObject.transform.childCount "  + 
+									gameObject.transform.childCount + 
+									" != "+ 
+									" (lenght + leftWall + rightWall) "+ 
+									(lenght + leftWall + rightWall)  + 
+									" groundPicker != "
+									+ groundPickerUpdater);
+				break;
+			}
 			groundPickerUpdater = groundPicker;
 			if(lenght == 1){ 
 				InstaciateGroundType( ground[groundPicker].singleBlock );
@@ -105,6 +116,7 @@ public class mapBuilder : MonoBehaviour {
 		
 	}
 	void InstaciateGroundType( GameObject groundTrans){ //Takes in the right GameObject and instanciates it to the right place
+		int wallOffset = 0;
 
 		Vector3 platformPos = new Vector3(	transform.position.x + (float)offset, //Finds the right place
 		                                	transform.position.y,
@@ -113,6 +125,28 @@ public class mapBuilder : MonoBehaviour {
 		GameObject instaceOfGround = (GameObject)Instantiate( groundTrans, 
 		                                                      platformPos,
 		                                                      Quaternion.identity );
+		while(offset == 0  && leftWall != wallOffset ){
+			Vector3 wallPos = new Vector3(	transform.position.x + (float)offset, //Finds the right place
+			                                  transform.position.y + (float)wallOffset,
+			                                  transform.position.z);
+			GameObject instaceOfWall = (GameObject)Instantiate(   groundTrans, 
+			                                                      wallPos,
+			                                                      Quaternion.identity );
+			instaceOfWall.transform.SetParent(gameObject.transform); 
+			wallOffset++;
+		}
+		if( offset == lenght) {
+			Debug.Log("gagaga");
+			Vector3 wallPos = new Vector3(	transform.position.x + (float)offset, //Finds the right place
+			                             	transform.position.y,
+			                              	transform.position.z);
+			GameObject instaceOfWall = (GameObject)Instantiate( groundTrans, 
+			                                                  	wallPos,
+			                                                   	Quaternion.identity );
+			instaceOfWall.transform.SetParent(gameObject.transform); 
+			wallOffset++;
+		}
+		//Debug.Log((lenght + rightWall) + " " + (offset + 1) );
 		instaceOfGround.transform.SetParent(gameObject.transform); 
 		offset++;
 	}

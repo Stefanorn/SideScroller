@@ -22,7 +22,6 @@ public class keyUnlocksDoor : MonoBehaviour {
 	}
 	IEnumerator KeyToDoor() {
 		float timer = 0f;
-
 		while(timer <= timeFromAtoB ){
 			key.transform.position = Vector3.Lerp( 	key.transform.position ,
 			                             			door.transform.position , 
