@@ -18,15 +18,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &170450
+--- !u!1 &148002
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 485956}
-  - 212: {fileID: 21240422}
+  - 4: {fileID: 497454}
+  - 212: {fileID: 21277334}
   m_Layer: 0
   m_Name: grass(Clone)
   m_TagString: Untagged
@@ -41,18 +41,18 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21, y: 4, z: 0}
+  m_LocalPosition: {x: 19, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 485956}
+  - {fileID: 497454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &485956
+--- !u!4 &497454
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170450}
+  m_GameObject: {fileID: 148002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -133,12 +133,12 @@ MonoBehaviour:
   lenght: 1
   leftWall: 0
   rightWall: 0
---- !u!212 &21240422
+--- !u!212 &21277334
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170450}
+  m_GameObject: {fileID: 148002}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
