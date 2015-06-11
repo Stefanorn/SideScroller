@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74, y: 0, z: 0}
+  m_LocalPosition: {x: 21, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485956}
@@ -104,26 +104,31 @@ MonoBehaviour:
     middleBlock: {fileID: 172580, guid: d8cd861401707af4b8296bda90f5858f, type: 2}
     rightCorner: {fileID: 138794, guid: f364dceabb84b964287b9ef12633ce34, type: 2}
     leftCorner: {fileID: 151098, guid: b66c2df83ae68c24a8072e40306a845c, type: 2}
+    centerBlock: {fileID: 109502, guid: b33cf422738c11f478b217ade30c6974, type: 2}
   - name: GrassHalf
     singleBlock: {fileID: 190388, guid: 2a61b01327d3cc7468db114f9a91cfea, type: 2}
     middleBlock: {fileID: 125772, guid: 2b46feb9bc9d64b46980ed9c318d9d70, type: 2}
     rightCorner: {fileID: 149106, guid: d87a7fa2d32e07c41b813c8b97bd3791, type: 2}
     leftCorner: {fileID: 130352, guid: c985f95cb2e54fd4db1ae2e94bee7a46, type: 2}
+    centerBlock: {fileID: 109502, guid: b33cf422738c11f478b217ade30c6974, type: 2}
   - name: SnowCliff
     singleBlock: {fileID: 149066, guid: d5e8399c1cafa4c438c4d982d61df0c0, type: 2}
     middleBlock: {fileID: 121180, guid: 731f32254ddba1d47b714516c8159208, type: 2}
     rightCorner: {fileID: 166060, guid: b193e632b297f0b42a2200eca5d294ac, type: 2}
     leftCorner: {fileID: 164102, guid: 90b76ebd8f158f342a412303e15e6e6f, type: 2}
+    centerBlock: {fileID: 126698, guid: c5cdaf1b6a416be4db3f1479c1af390e, type: 2}
   - name: SandCliff
     singleBlock: {fileID: 169388, guid: adc6376f952cb9a44a0fcee6bbedecd4, type: 2}
     middleBlock: {fileID: 169108, guid: 30930c9df3bf618459a43ed1d0d7ab36, type: 2}
     rightCorner: {fileID: 167616, guid: 4a5c54eba6d28d54aaea523dd0d64424, type: 2}
     leftCorner: {fileID: 151500, guid: e7996a3ca4ac05a4bacb72ee88c634fd, type: 2}
+    centerBlock: {fileID: 115706, guid: 6e34b78b6cf1c034bac88d8ef03649bc, type: 2}
   - name: Space Platform
     singleBlock: {fileID: 174246, guid: fbc4029594a19c04092f37949f8af9a8, type: 2}
     middleBlock: {fileID: 156376, guid: 199f24b735fce1d43b3ab959418c36a6, type: 2}
     rightCorner: {fileID: 199174, guid: cc866e78148fff747951fb20d0b1bc9c, type: 2}
     leftCorner: {fileID: 187802, guid: 501abd168a3f9ff4d9b64f6662f4dda4, type: 2}
+    centerBlock: {fileID: 141282, guid: 053d0a4499932774fb350c03f5a9e43e, type: 2}
   groundPicker: 0
   lenght: 1
   leftWall: 0
